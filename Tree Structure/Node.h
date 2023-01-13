@@ -32,15 +32,15 @@ public:
 		}
 	}
 
+	void AddChild(const Node<T>& child) 
+	{
+		Children.push_back(child);
+		Children[Children.size() - 1].Parent = this;
+	}
+
 	void SetChild(long index, const Node<T>& child)
 	{
-		if (index < Children.size()) {
-			Children[index] = child;
-			Children[index].Parent = this;
-		}
-		else {
-			Children.push_back(child);
-			Children[Children.size() - 1].Parent = this;
-		}
+		Children[index] = child;
+		Children[index].Parent = this;
 	}
 };
