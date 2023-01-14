@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Node.h";
+#include "Node.h"
 
 int main()
 {
     Node<std::string> root(2, "Root");  // Create a root node
-    root.AddChild( Node<std::string>(2, "Random Data 0"));  // Insert a child
+    root.AddChild(Node<std::string>(2, "Random Data 0"));  // Insert a child
     root.AddChild(Node<std::string>(2, "Random Data 1"));
 
     auto& child0 = root.Children[0];  // Get a reference of the first child of the root
