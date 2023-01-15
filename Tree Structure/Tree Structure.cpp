@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Node.h"
 
-int main()
+auto main() -> int
 {
     Node<std::string> root(2, "Root");  // Create a root node
     root.AddChild(Node<std::string>(2, "Random Data 0"));  // Insert a child
@@ -24,4 +24,6 @@ int main()
 
     Node<std::string> newRoot(2, "New Root");
     newRoot.AddChild(root.Children[0]);  // Copy child 0 of the root to child 0 of the new root
+
+    return 0;
 }
